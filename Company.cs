@@ -22,7 +22,7 @@ namespace Classes
         {
             foreach (Employee employee in employees)
             {
-                Console.WriteLine($@"{employee.First} {employee.First} works for {Name} as {employee.Title} since {employee.StartDate}.");
+                Console.WriteLine($@"{employee.First} {employee.First} works for {Name} as {employee.Title} since {employee.StartDate.ToString("MM/dd/yy")}.");
             } 
         }
         
