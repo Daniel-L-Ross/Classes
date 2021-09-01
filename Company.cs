@@ -9,17 +9,22 @@ namespace Classes
         // Some readonly properties (let's talk about gets, baby)
         public string Name { get; }
         public DateTime CreatedOn { get; }
-
-        // Create a public property for holding a list of current employees
         
-        List<Employee> employees = new List<Employee>; 
-        /*
-            Create a constructor method that accepts two arguments:
-                1. The name of the company
-                2. The date it was created
+        public List<Employee> employees = new List<Employee>();
 
-            The constructor will set the value of the public properties
+        public Company (string name, DateTime createdOn)
+        {
+            Name = name;
+            CreatedOn = createdOn;
+        }
 
-        */
+        public void ListEmployees()
+        {
+            foreach (Employee employee in employees)
+            {
+                Console.WriteLine($@"{employee.First} {employee.First} works for {Name} as {employee.Title} since {employee.StartDate}.");
+            } 
+        }
+        
     }
 }
